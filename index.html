@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="vi" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233b82f6'/%3E%3Ctext x='16' y='23' font-size='19' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+<title>CyberPass CBK — Bản song ngữ EN/VI</title>
+<style>
+:root{
+  --bg:#ffffff; --fg:#0f172a; --muted:#64748b; --line:#e2e8f0; --soft:#f8fafc;
+  --primary:#3b82f6; --chip:#f1f5f9; --en-bg:#f8fafc; --en-fg:#475569;
+  --shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter","Noto Sans",Roboto,Arial,sans-serif;
+  --fs:18px;
+}
+:root[data-theme="dark"]{
+  --bg:#0b1120; --fg:#e8eef8; --muted:#8b9bb4; --line:#1e293b; --soft:#111a2e;
+  --primary:#8b5cf6; --chip:#182135; --en-bg:#0f1830; --en-fg:#9fb0c9;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* ---------- thanh trên ---------- */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:14px;padding:10px 18px;max-width:1500px;margin:0 auto}
+.brand{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.brand b{font-size:14px;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand span{font-size:11px;color:var(--muted)}
+.grow{flex:1}
+.seg{display:flex;background:var(--chip);border-radius:10px;padding:2px}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-size:13px;
+  padding:6px 12px;border-radius:8px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--bg);color:var(--fg);box-shadow:var(--shadow);
+  font-weight:600}
+.icon{border:1px solid var(--line);background:transparent;color:var(--muted);width:34px;height:34px;
+  border-radius:9px;cursor:pointer;font-size:15px;display:grid;place-items:center}
+.icon:hover{color:var(--fg);border-color:var(--primary)}
+#q{border:1px solid var(--line);background:var(--soft);color:var(--fg);border-radius:10px;
+  padding:8px 12px;font:inherit;font-size:13px;width:210px;outline:none}
+#q:focus{border-color:var(--primary);width:280px}
+#bar-progress{height:2px;background:var(--primary);width:0;transition:width .12s linear}
+
+/* ---------- khung ---------- */
+.wrap{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0;max-width:1500px;margin:0 auto}
+aside{position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;
+  border-right:1px solid var(--line);padding:16px 10px 60px}
+aside::-webkit-scrollbar{width:8px}
+aside::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.toc-chap{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+  margin:20px 10px 8px;font-weight:700}
+.toc-item{display:block;padding:7px 10px;border-radius:8px;font-size:13.5px;color:var(--muted);
+  line-height:1.35;border-left:2px solid transparent}
+.toc-item:hover{background:var(--soft);color:var(--fg)}
+.toc-item.on{background:var(--soft);color:var(--fg);border-left-color:var(--primary);font-weight:600}
+.toc-back{display:block;padding:7px 10px;border-radius:8px;font-size:13px;font-weight:600;
+  color:var(--primary)}
+.toc-back:hover{background:var(--soft)}
+.hide{display:none !important}
+
+main{padding:34px 40px 140px;min-width:0}
+article{max-width:74ch;margin:0 auto;font-size:var(--fs);line-height:1.75}
+
+/* ---------- chữ ---------- */
+h1,h2,h3,h4{line-height:1.25;letter-spacing:-.01em}
+h1{font-size:1.9em;margin:0 0 6px}
+h2{font-size:1.05em;text-transform:uppercase;letter-spacing:.09em;color:var(--primary);
+  margin:64px 0 4px;font-weight:700}
+h3{font-size:1.45em;margin:52px 0 6px;scroll-margin-top:80px}
+h4{font-size:1.05em;margin:34px 0 4px}
+h2 .en,h3 .en,h4 .en,h1 .en{display:block;font-size:.72em;font-weight:400;font-style:italic;
+  color:var(--muted);text-transform:none;letter-spacing:0;margin-top:3px}
+article p{margin:0 0 1.05em}
+article ul,article ol{margin:0 0 1.05em;padding-left:1.35em}
+article li{margin:.3em 0}
+code{font-family:ui-monospace,"SF Mono",Consolas,monospace;font-size:.86em;background:var(--chip);
+  padding:.12em .38em;border-radius:5px}
+img{max-width:100%;border:1px solid var(--line);border-radius:10px;margin:1em 0;background:#fff}
+figcaption{font-size:.85em;color:var(--muted);margin:-.4em 0 1.4em}
+
+/* ---------- cặp song ngữ ---------- */
+.pair{margin:0 0 1.5em}
+.pair .vi>*:last-child{margin-bottom:0}
+.pair .en{margin-top:.55em;padding:.7em 1em;background:var(--en-bg);border-left:2px solid var(--line);
+  border-radius:0 8px 8px 0;color:var(--en-fg);font-size:.9em;line-height:1.6}
+.pair .en p{margin:0 0 .6em}
+.pair .en p:last-child{margin:0}
+.pair .en .callout{background:transparent;border:0;padding:0;margin:0}
+
+.callout{background:var(--soft);border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;margin:0 0 1.2em;font-size:.95em}
+.callout strong{color:var(--primary)}
+.kw{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:1.2em 0 2em}
+.kw-label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);
+  margin-right:4px;font-weight:700}
+.chip{font-size:12px;background:var(--chip);color:var(--en-fg);border-radius:999px;
+  padding:4px 11px;white-space:nowrap}
+
+/* ---------- chế độ đọc ---------- */
+body[data-mode="vi"] .en{display:none}
+body[data-mode="en"] .vi{display:none}
+body[data-mode="en"] .pair .en{background:transparent;border:0;padding:0;color:var(--fg);
+  font-size:1em;line-height:1.75;margin:0}
+body[data-mode="en"] h2 .en,body[data-mode="en"] h3 .en,body[data-mode="en"] h4 .en{
+  font-style:normal;font-size:1em;color:inherit;font-weight:inherit;margin:0}
+body[data-serif="1"] article{font-family:var(--serif)}
+mark{background:#fde68a;color:#111;border-radius:3px}
+mark.cur{outline:2px solid var(--primary);outline-offset:1px}
+img.broken{display:block;padding:16px 18px;background:var(--soft);border-style:dashed;
+  font-size:.85em;color:var(--muted);line-height:1.5;min-height:0}
+:root[data-theme="dark"] mark{background:#7c5cff;color:#fff}
+
+/* ---------- lặt vặt ---------- */
+.top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer;
+  box-shadow:var(--shadow);font-size:16px;opacity:0;pointer-events:none;transition:opacity .2s}
+.top.show{opacity:1;pointer-events:auto}
+.burger{display:none}
+.hint{color:var(--muted);font-size:12px;text-align:center;margin-top:60px;padding-top:20px;
+  border-top:1px solid var(--line)}
+kbd{font-family:inherit;font-size:11px;border:1px solid var(--line);border-bottom-width:2px;
+  border-radius:5px;padding:1px 5px;margin:0 2px}
+
+@media (max-width:1000px){
+  .wrap{grid-template-columns:1fr}
+  aside{position:fixed;left:0;top:56px;width:290px;background:var(--bg);z-index:15;
+    box-shadow:var(--shadow);transform:translateX(-102%);transition:transform .22s}
+  aside.open{transform:none}
+  .burger{display:grid}
+  main{padding:24px 18px 120px}
+  #q{width:130px}#q:focus{width:170px}
+  .brand span{display:none}
+}
+@media print{
+  header,aside,.top,.hint{display:none !important}
+  .wrap{display:block}main{padding:0}article{max-width:none;font-size:11pt}
+  .pair .en{display:none}
+  h3{page-break-after:avoid}
+}
+
+main.home{padding:64px 24px 120px;max-width:1000px;margin:0 auto}
+.home h1{font-size:2.3em;margin:0 0 8px}
+.lead{color:var(--muted);font-size:1.05em;max-width:60ch;margin:0 0 44px;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{display:block;border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+  background:var(--soft);transition:transform .15s,border-color .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--primary);box-shadow:var(--shadow)}
+.card .n{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--primary);
+  font-weight:700}
+.card h2{font-size:1.12em;margin:8px 0 4px;text-transform:none;letter-spacing:-.01em;color:var(--fg)}
+.card .en{font-size:.86em;color:var(--muted);font-style:italic}
+.card .meta{font-size:12px;color:var(--muted);margin-top:12px}
+.foot{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);
+  font-size:13px;line-height:1.7}
+</style>
+</head>
+<body data-vol="home" data-mode="both">
+<main class="home">
+  <h1>CyberPass — Cybersecurity Body of Knowledge</h1>
+  <p class="lead">Bản dịch song ngữ Anh&ndash;Việt của 8 tập sách, 1.080 chuyên đề.
+     Mỗi tập là một file tự chứa: mở là đọc, không cần mạng.</p>
+  <div class="grid"><a class="card" href="domain-1.html"><div class="n">Tập 1</div><h2>Domain 1 — Quản lý an ninh và rủi ro</h2><div class="en">Domain 1 — Security and Risk Management</div><div class="meta">170 chuyên đề · 25 chương</div></a>
+<a class="card" href="domain-2.html"><div class="n">Tập 2</div><h2>Domain 2 — An ninh tài sản</h2><div class="en">Domain 2 — Asset Security</div><div class="meta">55 chuyên đề · 7 chương</div></a>
+<a class="card" href="domain-3.html"><div class="n">Tập 3</div><h2>Domain 3 — An ninh kiến trúc và kỹ thuật</h2><div class="en">Domain 3 — Security Architecture and Engineering</div><div class="meta">233 chuyên đề · 43 chương</div></a>
+<a class="card" href="domain-4.html"><div class="n">Tập 4</div><h2>Domain 4 — An ninh truyền thông và mạng</h2><div class="en">Domain 4 — Communication and Network Security</div><div class="meta">167 chuyên đề · 35 chương</div></a>
+<a class="card" href="domain-5.html"><div class="n">Tập 5</div><h2>Domain 5 — Quản lý danh tính và truy cập (IAM)</h2><div class="en">Domain 5 — Identity and Access Management (IAM)</div><div class="meta">108 chuyên đề · 11 chương</div></a>
+<a class="card" href="domain-6.html"><div class="n">Tập 6</div><h2>Domain 6 — Đánh giá và kiểm thử an ninh</h2><div class="en">Domain 6 — Security Assessment and Testing</div><div class="meta">63 chuyên đề · 3 chương</div></a>
+<a class="card" href="domain-7.html"><div class="n">Tập 7</div><h2>Domain 7 — An ninh vận hành</h2><div class="en">Domain 7 — Security Operations</div><div class="meta">162 chuyên đề · 24 chương</div></a>
+<a class="card" href="domain-8.html"><div class="n">Tập 8</div><h2>Domain 8 — An ninh phát triển phần mềm</h2><div class="en">Domain 8 — Software Development Security</div><div class="meta">122 chuyên đề · 15 chương</div></a></div>
+  <div class="foot">
+    Đọc theo ba chế độ: <b>Song ngữ</b> (tiếng Việt kèm nguyên bản), <b>Việt</b> (đọc liền mạch),
+    <b>English</b> (nguyên bản). Cỡ chữ, kiểu chữ, chế độ đọc và vị trí đang đọc được nhớ riêng
+    cho từng tập.<br>
+    Bản dịch do AI sinh theo bộ quy tắc <code>scripts/glossary_vi.py</code>, đã qua bộ soát
+    <code>scripts/qa_book.py</code> — thuật ngữ chuyên ngành vẫn cần người có chuyên môn rà soát
+    trước khi dùng làm tài liệu chính thức.
+  </div>
+</main>
+</body>
+</html>
